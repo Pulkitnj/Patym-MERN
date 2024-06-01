@@ -1,6 +1,9 @@
 import React from 'react'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import SignUp from './pages/SignUp'
+import { Signup } from './pages/SignUp'
+import { SendMoney } from './components/SendMoney'
+import Dashboard from './pages/Dashboard'
+import Signin from './pages/SignIn'
 
 function App() {
   return (
@@ -8,7 +11,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<div>Home</div>} />
-        <Route path="/signup" element={ <SignUp /> } />
+        <Route path="/signup" element={ <Signup /> } />
+        <Route path="/signin" element={ <Signin /> } />
+        <Route path="/dashboard" element={ <Dashboard /> } />
+        <Route path="/send" element={ <SendMoney /> } />
       </Routes>
     </BrowserRouter>
     </>
