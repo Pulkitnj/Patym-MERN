@@ -1,10 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
+require('dotenv').config()
 
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://pulkitjain:5rwetTegaoBbbLtW@cluster0.up6tp1a.mongodb.net/Paytm");
+mongoose.connect(process.env.A);
 
 const UserSchema = new mongoose.Schema({
     username: {
